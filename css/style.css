@@ -256,6 +256,120 @@ section {
     color: var(--color-text-secondary);
 }
 
+/* 游戏区块 */
+.games {
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.tetris-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.tetris-board-area {
+    flex-shrink: 0;
+}
+
+#game-board {
+    border: 2px solid var(--color-border);
+    background-color: #111;
+    display: block;
+}
+
+.tetris-side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 160px;
+}
+
+.tetris-next {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.tetris-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+}
+
+#next-piece {
+    border: 2px solid var(--color-border);
+    background-color: #111;
+    display: block;
+}
+
+.tetris-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tetris-stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #fafafa;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.tetris-stat-label {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.tetris-stat-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+}
+
+.tetris-start-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.02em;
+}
+
+.tetris-start-btn:hover {
+    opacity: 0.85;
+}
+
+.tetris-controls-hint {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    line-height: 1.6;
+    padding: 8px;
+    border: 1px dashed var(--color-border);
+    border-radius: 4px;
+}
+
+.tetris-controls-hint p {
+    margin: 0;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .nav {
@@ -281,6 +395,33 @@ section {
 
     .section-text {
         font-size: 1.1rem;
+    }
+
+    .tetris-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #game-board {
+        width: 240px;
+        height: 480px;
+    }
+
+    .tetris-side-panel {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-width: auto;
+    }
+
+    .tetris-next {
+        flex-direction: row;
+    }
+
+    .tetris-controls-hint {
+        width: 100%;
     }
 }
 
@@ -308,6 +449,10 @@ section {
 
     .header {
         background-color: rgba(10, 10, 10, 0.95);
+    }
+
+    .tetris-stat-item {
+        background-color: #151515;
     }
 }
 
