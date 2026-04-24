@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>经典俄罗斯方块</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            display: flex;
+            gap: 20px;
+        }
+        #game-board {
+            border: 2px solid #333;
+            background-color: #111;
+        }
+        #next-piece {
+            border: 2px solid #333;
+            background-color: #111;
+        }
+        #game-info {
+            color: #fff;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+        }
+        #start-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #start-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-board" width="300" height="600"></canvas>
+        <div>
+            <canvas id="next-piece" width="120" height="120"></canvas>
+            <div id="game-info">
+                <div class="info-item">
+                    <span>分数:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="info-item">
+                    <span>等级:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="info-item">
+                    <span>行数:</span>
+                    <span id="lines">0</span>
+                </div>
+                <button id="start-button">开始游戏</button>
+            </div>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
